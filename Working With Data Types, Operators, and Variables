@@ -1,0 +1,154 @@
+/*
+1. For each of the following code blocks, 
+read the code and predict what the result of evaluating it would be, 
+then execute the statement(s) in the Chrome console.
+*/
+
+var a = 1; // 3
+var b = a++; // 1
+var c = ++a; // 3
+// what is the value of a, b, and c?
+
+var d = "hello"; // NaN
+var e = false; // 1
+
+d++;
+e++;
+
+var perplexed; // perplexed is undefined (no value is assigned)
+perplexed + 2; // 
+// NaN
+
+
+var price = 2.7; 
+price.toFixed(2); // '2.70'
+
+var price = "2.7";
+price.toFixed(2); // 2.7
+
+isNaN(0) // false
+
+isNaN(1) // false
+
+isNaN("") // true
+
+isNaN("string") // true
+
+isNaN("0") // false
+
+isNaN("1") //false
+
+isNaN("3.145") //false
+
+isNaN(Number.MAX_VALUE) //false
+
+isNaN(Infinity) //false
+
+isNaN("true") // true
+
+isNaN(true) // false
+
+isNaN("false") //true
+
+isNaN(false) // false
+
+// to illustrate why the isNaN() function is needed:
+NaN == NaN
+
+!true // false
+
+!false // true
+
+!!true // true
+
+!!false //false
+
+!!0 //false
+
+!!-0 //false
+
+!!1 // true
+
+!!-1 // true
+
+!!0.1 // true
+
+!!"hello" // true
+
+!!"" // false
+
+!!''  // false
+
+!!"false" // true
+
+!!"0" //true
+
+/* 
+2. Execute the following statement in the Chrome JavaScript 
+console and then follow the directions below.
+*/
+
+var sample = "Hello Codeup";
+
+sample.length;
+// 12
+
+sample.toUpperCase();
+// 'HELLO CODEUP'
+
+sample = sample + " Students";
+// 'Hello Codeup Students'
+
+sample.replace("Students","Class");
+// 'Hello Codeup Class'
+
+sample.indexOf("c");
+// -1
+
+sample.indexOf("C");
+6
+
+sample.substring(6,12);
+// 'Codeup'
+
+/* 
+Write some JavaScript code, that is, variables and operators, 
+to describe the following scenarios. 
+Do not worry about the real operations to get the values, 
+the goal of these exercises is to understand how 
+real world conditions can be represented with code.
+-------------------------
+1. You have rented some movies for your kids: The little mermaid (for 3 days), 
+Brother Bear (for 5 days, they love it), 
+and Hercules (1 day, you don't know yet if they're going to like it). 
+If price for a movie per day is $3, how much will you have to pay?
+
+2. Suppose you're working as a contractor for 3 companies: Google, 
+Amazon and Facebook, they pay you a different rate per hour. 
+Google pays $400, Amazon $380, and Facebook $350. 
+How much will you receive in payment for this week? 
+You worked 10 hours for Facebook, 6 hours for Google and 4 hours for Amazon.
+
+3. A student can be enrolled in a class only if the class is not full
+and the class schedule does not conflict with her current schedule.
+
+4. A product offer can be applied only if a person buys more than 2 items, 
+and the offer has not expired. Premium members do not need to buy a specific 
+amount of products.
+
+
+
+//Use the following code to follow the instructions below:
+
+var username = 'codeup';
+var password = 'notastrongpassword';
+
+/*
+Create a variable that holds a boolean value for each of the 
+following conditions:
+
+-the password must be at least 5 characters
+-the password must not include the username
+-the username must be no more than 20 characters
+-neither the username or password can start or end with whitespace
+*/
