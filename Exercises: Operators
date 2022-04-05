@@ -6,7 +6,7 @@ typeof '1' + 2  // 'string2'
 
 '3 + 4 is ' + 3 + 4
 // how could you make this produce the correct output? 
-// '3 + 4 is " + 7 // '3 + 4 is 7'
+// '3 + 4 is " + (3 + 4) // '3 + 4 is 7'
 
 0 < 0 // false
 
