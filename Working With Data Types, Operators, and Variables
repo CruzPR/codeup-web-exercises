@@ -18,7 +18,7 @@ d++;
 e++;
 
 var perplexed; // perplexed is undefined (no value is assigned)
-perplexed + 2; // 
+perplexed + 2;
 // NaN
 
 
@@ -120,7 +120,7 @@ Do not worry about the real operations to get the values,
 the goal of these exercises is to understand how 
 real world conditions can be represented with code.
 */
-------------------------- //
+
 /*
 1. You have rented some movies for your kids: The little mermaid (for 3 days), 
 Brother Bear (for 5 days, they love it), 
@@ -177,16 +177,16 @@ var studentCantJoinClass = fullClass || conflictingSchedule; // false
 and the offer has not expired. Premium members do not need to buy a specific 
 amount of products.
 */
-var item <= 2;
-var items >= 3;
-var offerReqMet = items;
-var offerReqNotMet = item;
-var offerNotExpired = true;
-var offerExpired = false;
-var premiumMember = true;
+let item <= 2;
+let items >= 3;
+let offerReqMet = items;
+let offerReqNotMet = item;
+let offerNotExpired = true;
+let offerExpired = false;
+let premiumMember = true;
 
-var productOfferApplied = offerReqMet || premiumMember + offerNotExpired;
-var productOfferNotApplied = offerReqNotMet || offerExpired;
+let productOfferApplied = offerReqMet || premiumMember + offerNotExpired;
+let productOfferNotApplied = offerReqNotMet || offerExpired;
 
 
 //Use the following code to follow the instructions below:
