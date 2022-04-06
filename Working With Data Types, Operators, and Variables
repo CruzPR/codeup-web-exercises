@@ -203,13 +203,13 @@ following conditions:
  -the username must be no more than 20 characters
  -neither the username or password can start or end with whitespace
 */
-var passwordCharCount
-var goodPassword >= 5;
-var badPassword <= 4;
-goodPassword + password + passwordNotUsername = true;
-passwordNotUsername = password != username;
-var goodPassword = true
-var goodPasswordAndUsername = password >= 5 && password !== username && username <= 20 && 
+
+var goodPassCharCount = password >= 5;
+var passNotUsername = password !== username;
+var usernameCharCount = username <= 20;
+var noWhiteSpace = username.trim() && password.trim();
+
+var goodPassword = goodPassCharCount && passNotUsername && usernameCharCount && noWhiteSpace;
 
 
 
