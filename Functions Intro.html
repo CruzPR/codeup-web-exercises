@@ -161,6 +161,9 @@
     // Write a function, getSmallerSegment, that takes in a string and a number input. The function should return a substring of the first argument that is as many characters long as the second argument in lowercase.
 
     function getSmallerSegment (str,segmentLength){
+        // var smallerSegmentStr = str.substring(0, segmentLength);
+        //var lowercasedSubStr = smallerSegmentStr.toLowerCase();
+        //return lowercasedSubStr;
         return str.substring(0,segmentLength).toLowerCase();
     }
     console.log(getSmallerSegment("HELLOTHERE", 5)); // "hellot"

@@ -1,5 +1,5 @@
 "use strict";
-
+(function (){
 /**
  * TODO:
  * Create a function called 'sayHello' that takes a parameter 'name'.
@@ -14,7 +14,8 @@
 
     function sayHello(str){
         return "Hello, " + str + "!";
-}
+        console.log(sayHello("Carlos"));
+    }
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -34,8 +35,7 @@ console.log(helloMessage);
  */
 
 var myName = "Carlos";
-sayHello(myName);
-
+    console.log(sayHello(myName));
 
 
 // Don't modify the following line, it generates a random number between 1 and 3
@@ -64,14 +64,12 @@ var random = Math.floor((Math.random() * 3) + 1);
 //what is the return type? boolean
 
     function isTwo (num){
-        if(num === 2){
-            return true;
-        }
-            return false;
-}
-isTwo(random);
+        return num === 2;
 
-console.log(isTwo(random));
+}
+console.log(isTwo(random), "Random number is " + num);
+
+
 
 /**
  * TODO:
@@ -88,12 +86,12 @@ console.log(isTwo(random));
 //what data type for inputs? floating numbers
 //what is the return type? floating number
 
-var tipSuggestion = function calculateTip(tipPercentage, totalBill) {
+function calculateTip(tipPercentage, totalBill) {
     return parseFloat(totalBill) / parseFloat(tipPercentage);
-        console.log(tipSuggestion);
+        console.log(calculateTip(10, 100));
 }
-(10.00, 100);
 
+calculateTip(10, 100);
 
 /**
  * TODO:
@@ -131,15 +129,21 @@ var tipSuggestion = function calculateTip(tipPercentage, totalBill) {
 //what data type for inputs? float numbers
 //what is the return type? float number
 
-    function applyDiscount(regularPrice, priceDiscountPercentage) {
-        // var regularPrice = parseFloat( 100.00);
-        // var priceDiscountPercentage = parseFloat(  0.5 );
-        var finalDiscountedPrice = parseFloat("$" +regularPrice) - parseFloat(priceDiscountPercentage + "%");
-            return "$" + parseFloat(finalDiscountedPrice) ;
-    console.log(finalDiscountedPrice);
-}
-applyDiscount(100.00, 0.5);
+//     function applyDiscount(regularPrice, priceDiscountPercentage) {
+//         // var regularPrice = parseFloat( 100.00);
+//         // var priceDiscountPercentage = parseFloat(  0.5 );
+//         var finalDiscountedPrice = parseFloat("$" +regularPrice) - parseFloat(priceDiscountPercentage + "%");
+//             return "$" + parseFloat(finalDiscountedPrice) ;
+//     console.log(finalDiscountedPrice);
+// }
+// applyDiscount(100.00, 0.5);
+    
+    function applyDiscount(orgPrice,discountPercent) {
+        return orgPrice + (orgPrice + discountPercent);
+    }
+
+    console.log(applyDiscount(100, .2));
 
 
-
+})();
 
