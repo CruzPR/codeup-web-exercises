@@ -89,10 +89,11 @@ console.log(isTwo(random));
 //what is the return type? floating number
 
 var tipSuggestion = function calculateTip(tipPercentage, totalBill) {
-        return parseFloat(totalBill) / parseFloat(tipPercentage);
+    return parseFloat(totalBill) / parseFloat(tipPercentage);
+        console.log(tipSuggestion);
 }
+(10.00, 100);
 
-console.log(tipSuggestion);
 
 /**
  * TODO:
@@ -126,10 +127,18 @@ console.log(tipSuggestion);
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
-// how many inputs?
-//what data type for inputs?
-//what is the return type?
+// how many inputs? 2
+//what data type for inputs? float numbers
+//what is the return type? float number
 
+    function applyDiscount(regularPrice, priceDiscountPercentage) {
+        // var regularPrice = parseFloat( 100.00);
+        // var priceDiscountPercentage = parseFloat(  0.5 );
+        var finalDiscountedPrice = parseFloat("$" +regularPrice) - parseFloat(priceDiscountPercentage + "%");
+            return "$" + parseFloat(finalDiscountedPrice) ;
+    console.log(finalDiscountedPrice);
+}
+applyDiscount(100.00, 0.5);
 
 
 
