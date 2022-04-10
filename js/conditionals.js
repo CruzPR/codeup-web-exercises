@@ -25,24 +25,24 @@
  * console.logging the function's return value
  */
 
-    function analyzeColor(strColor) {
-        if( strColor === "blue") {
-            return alert("The color " + strColor + " is the color of the ocean!");
-        } else if ( strColor === "red") {
-            return alert("The color " +strColor+ " is the color of roses!");
-        } else if ( strColor === "yellow"){
-            return alert("The color" +strColor+ " is the color of taxis!");
-        } else if ( strColor === "orange"){
-            return  alert("The color " +strColor+ " is the color of oranges");
-        } else {
-            return  alert("I dont know anything that has the " +strColor+ " color!");
-        }
-}
-
-
-
-
-
+    // function analyzeColor(strColor) {
+    //     if( strColor === "blue") {
+    //         return alert("The color " + strColor + " is the color of the ocean!");
+    //     } else if ( strColor === "red") {
+    //         return alert("The color " +strColor+ " is the color of roses!");
+    //     } else if ( strColor === "yellow"){
+    //         return alert("The color" +strColor+ " is the color of taxis!");
+    //     } else if ( strColor === "orange"){
+    //         return  alert("The color " +strColor+ " is the color of oranges");
+    //     } else {
+    //         return  alert("I dont know anything that has the " +strColor+ " color!");
+    //     }
+    //
+    // }
+    //
+    // console.log(analyzeColor("red"));
+    // console.log(analyzeColor("orange"));
+    // console.log(analyzeColor("black"));
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -57,17 +57,44 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * You should see a different message every time you refresh the page
  */
 
-/**
+    // console.log(analyzeColor(randomColor));
+
+
+    /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
+    /**
+     * TODO:
+     * Prompt the user for a color when the page loads, and pass the input from the
+     * user to your `analyzeColor` function. Alert the return value from your
+     * function to show it to the user.
+     */
+    
+        var userFavColor = prompt("What is you favorite color?")
+        function analyzeColor (userFavColor) {
+            switch (userFavColor) {
+                case "blue": 
+                return alert("The color " + userFavColor + " is the color of the ocean!");
+                break;
+                case "red":
+                return alert("The color " +userFavColor+ " is the color of roses!");
+                break;
+                case "yellow":
+                return alert("The color" +userFavColor+ " is the color of taxis!");
+                break;
+                case "orange":
+                return  alert("The color " +userFavColor+ " is the color of oranges");
+                break;
+                default:
+                return  alert("I dont know anything that has the " +userFavColor+ " color!");
+                break;
 
-/**
- * TODO:
- * Prompt the user for a color when the page loads, and pass the input from the
- * user to your `analyzeColor` function. Alert the return value from your
- * function to show it to the user.
- */
+            }
+
+        }
+        console.log(analyzeColor(userFavColor));
+
 
 /* ########################################################################## */
 
@@ -90,6 +117,45 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+
+    var luckyNumbers = [0, 1, 2, 3, 4, 5];
+    var randomLuckyNumbers = luckyNumbers[Math.floor(Math.random() * luckyNumbers.length)];
+    var customerTotalAmount = prompt("What is your total amount?");
+    function calculateTotal(luckyNumbers, customerTotalAmount) {
+        switch (randomLuckyNumbers) {
+            case 1:
+                return alert("You got a " + 1 +"!"+ " you have won a 10% discount!");
+                break;
+            case 2:
+                return alert("You got a " + 2 +"!"+ " you have won a 25% discount!");
+                break;
+            case 3:
+                return alert("You got a " + 3 +"!"+ " you have won a 35% discount!");
+                break;
+            case 4:
+                return alert("You got a " + 4 +"!"+ " you have won a 50% discount!");
+                break;
+            case 5:
+                return alert("You got a " + 5 +"!"+ " you will get everything for free!");
+                break;
+            case 0:
+                return alert("You got a " + 0 +"!"+ " you have lost the chance to win anything, better luck next time!");
+                break;
+            default:
+                return alert("You have to pick a number from 1 to 5 silly goose!")
+
+        }
+        console.log(calculateTotal(randomLuckyNumbers));
+
+
+    }
+
+
+
+
+
+
+
 
 /**
  * TODO:
