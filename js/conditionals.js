@@ -117,38 +117,36 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+    var numbers = [0, 1, 2, 3, 4, 5];
+    var randomLuckyNumber = numbers[Math.floor(Math.random() * 5)];
+    var assignedLuckyNumber = randomLuckyNumber;
+    
 
-    var luckyNumbers = [0, 1, 2, 3, 4, 5];
-    var randomLuckyNumbers = luckyNumbers[Math.floor(Math.random() * luckyNumbers.length)];
-    var customerTotalAmount = prompt("What is your total amount?");
-    function calculateTotal(luckyNumbers, customerTotalAmount) {
-        switch (randomLuckyNumbers) {
-            case 1:
-                return alert("You got a " + 1 +"!"+ " you have won a 10% discount!");
-                break;
-            case 2:
-                return alert("You got a " + 2 +"!"+ " you have won a 25% discount!");
-                break;
-            case 3:
-                return alert("You got a " + 3 +"!"+ " you have won a 35% discount!");
-                break;
-            case 4:
-                return alert("You got a " + 4 +"!"+ " you have won a 50% discount!");
-                break;
-            case 5:
-                return alert("You got a " + 5 +"!"+ " you will get everything for free!");
-                break;
-            case 0:
-                return alert("You got a " + 0 +"!"+ " you have lost the chance to win anything, better luck next time!");
-                break;
-            default:
-                return alert("You have to pick a number from 1 to 5 silly goose!")
+        function calculateTotal(assignedLuckyNumber,totalAmount) {
+
+            alert("You will now be assigned a lucky number to win amazing discounts or even free items, good luck!")
+
+            if( assignedLuckyNumber === 0) {
+                return  "Sorry, you won no discount today, better luck next time!"
+            }else if(assignedLuckyNumber === 1){
+                return totalAmount / "$" + 10 ;
+            }else if(assignedLuckyNumber === 2){
+                return totalAmount / "$" + 25;
+            }else if(assignedLuckyNumber === 3){
+                return totalAmount / "$" + 35;
+            }else if(assignedLuckyNumber === 4){
+                return totalAmount / "$" + 50;
+            }else if(assignedLuckyNumber === 5){
+                return "Congratulations, today you get everything for free!";
+            }else{
+                return "You have to pick a number from 1 to 5";
+            }
 
         }
-        console.log(calculateTotal(randomLuckyNumbers));
+    console.log(calculateTotal(assignedLuckyNumber,100));
 
 
-    }
+    
 
 
 
