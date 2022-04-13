@@ -93,18 +93,93 @@
 
 // Make a function named isMultipleOfThree(input)
     
-    function
-    
-    
-    
-    
-    
+    function isMultipleOfThree(input){
+        if(input % 3 === 0 ){
+            return true;
+        }
+            return false;
+    }
+
+    console.log(isMultipleOfThree(4));
+    console.log(isMultipleOfThree("9"));
+    console.log(isMultipleOfThree(30));
+    console.log(isMultipleOfThree("99"));
+
 // Make a function named isMultipleOfThreeAndFive(input)
+    function isMultipleOfThree(input){
+        if(input % 5 === 0 ){
+            return true;
+        }
+        return false;
+    }
+
+    console.log(isMultipleOfThree(40));
+    console.log(isMultipleOfThree("50"));
+    console.log(isMultipleOfThree(155));
+    console.log(isMultipleOfThree("99"));
+    
 // Make a function named isMultipleOf(target, n) which checks if target is evenly divisible by n
+    function isMultipleOf(target, n){
+        if(target % n === 0){
+            return true;
+        }
+            return false;
+    }
+
+    console.log(isMultipleOf(99, 9 ));
+    console.log(isMultipleOf(99, 3 ));
+    console.log(isMultipleOf(99, 11 ));
+    console.log(isMultipleOf(99, 4 ));
+
 // Make a function named isTrue(boolean)
+
+    function isTrue(boolean){
+        if(boolean === true){
+            return true;
+        }
+            return false;
+    }
+
+    console.log(isTrue(true));
+    console.log(isTrue(false));
+    console.log(isTrue("1"));
+    console.log(isTrue(-1));
+
 // Make a function named isFalse(boolean)
-// Make a function named isTruthy(input), remember that values other than true will behave like true
+
+    function isFalse(boolean){
+        if(boolean === false){
+            return false;
+        }
+            return true;
+    }
+
+    console.log(isFalse(true));
+    console.log(isFalse(false));
+    console.log(isFalse("1"));
+    console.log(isFalse(-1));
+
+// Make a function named isTruthy(input), remember that values other than true will behave like true  
+    function isTruthy(input){
+        if(input === Boolean(true)){
+            return true;
+        }
+            return false;
+    }
+
+    console.log(isTruthy(1));
+    console.log(isTruthy(-1));
+    console.log(isTruthy(true));
+    console.log(isTruthy(false));
+    
+    
 // Make a function named isFalsy(input), remember that values other than false behave like false
+    
+    
+    
+    
+    
+    
 // Make a function named isVowel(letter)
 // Make a function named isConsonant(letter)
 // Make a function named isCapital(letter)
