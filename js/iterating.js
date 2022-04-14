@@ -8,6 +8,7 @@
      * Create an array of 4 people's names and store it in a variable called
      * 'names'.
      */
+    var names = ["Carlos", "Sibel", "Gery", "Rene"];
 
     /**
      * TODO:
@@ -15,11 +16,19 @@
      * array.
      */
 
+    console.log(names.length);
+
     /**
      * TODO:
      * Create log statements that will print each of the names individually by
      * accessing each element's index.
      */
+
+    console.log(names[0]);
+    console.log(names[1]);
+    console.log(names[2]);
+    console.log(names[3]);
+
 
     /**
      * TODO:
@@ -27,10 +36,25 @@
      * array.
      */
 
+    function namesPrintOut(){
+        for(var i = 0; i < names.length; i += 1){
+            console.log(names[i]);
+        }
+
+    }
+namesPrintOut();
+
     /**
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
+
+    names.forEach(function(name){
+
+        console.log(name);
+
+    });
+
 
     /**
      * TODO:
@@ -46,12 +70,22 @@
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 
+    var array = [1, 2, 3, 4 ,5];
 
+    function arrayIndexOne(arrayInput) {
+        return arrayInput[0];
+    }
 
+    console.log(arrayIndexOne(array));
+    
+    function arrayIndexTwo(arrayInput) {
+        return arrayInput[1];
+    }
+    console.log(arrayIndexTwo(array));
 
-
-
-
-
+    function lastOfTheArray(arrayInput) {
+        return arrayInput[arrayInput.length - 1];
+    }
+    console.log(lastOfTheArray(array));
 
 })();
