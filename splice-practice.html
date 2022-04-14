@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Splice-Practice</title>
+</head>
+<body>
+
+ <script>
+     (function(){
+
+    "use strict"
+
+         var pies = [
+             "apple",
+             "cherry",
+             "key lime",
+             "huckleberry",
+             "rhubarb"
+         ];
+
+    // ** create a function that takes in an array of pies baked and return the 3 most recently baked pies
+
+        function recentlyBakedPies(pies) {
+            return pies.slice(pies.length - 3);
+        }
+
+         console.log(recentlyBakedPies(pies));
+
+
+     })();
+
+
+
+
+
+
+
+
+ </script>
+
+</body>
+</html>
