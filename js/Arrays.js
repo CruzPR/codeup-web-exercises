@@ -2,6 +2,7 @@
 
 (function (){
 
+
     // !! Write a function, returnLongString, that takes in an array of strings and returns all strings concatenated together !!
 
 
