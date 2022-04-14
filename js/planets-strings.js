@@ -10,8 +10,8 @@
      * planetsArray.
      * console.log planetsArray to check your work
      */
-    planetsString = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"];
-    var planetsArray = planetsString
+
+    var planetsArray = planetsString.split("|");
 
     console.log(planetsArray);
 
@@ -27,6 +27,8 @@
     var splitedPlanetsArray = planetsArray.join("<br>");
     
     console.log(splitedPlanetsArray);
+
+    var planetsList = "<ul><li>"  +planetsArray.join("</li></ul>")  +  "</li></ul>";
 
 
 // ============= BONUS 1
@@ -57,7 +59,29 @@
 //         Example input: "aBc12#""
 //     Example output: "AbC12#"
 //
-//
+        function flipCase(str) {
+            var output= '';
+            //loop through each character and flip the case if it's a letter
+            //method channing
+            str.split('').forEach(function(character) {
+                if(character === character.toUpperCase()) {
+                    output += character.toLowerCase();
+                } else {
+                    output += character.toUpperCase();
+                }
+            });
+            return output;
+        }
+
+        console.log(flipCase("aBc12#"), "AbC12#");
+
+
+
+
+
+
+
+
 //     ============== BONUS 3
 //
 //     Write a program that takes a given string appended with a number at the end. The program will check the length of the string to verify the string is equal to the number appended. If the number appended equals the string length, output "Yes". if the number appended does not equal the string length, output "No".
