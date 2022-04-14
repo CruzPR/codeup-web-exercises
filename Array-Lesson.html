@@ -195,9 +195,108 @@
 
     // !! Write a function, logNums, that takes in a array and logs each number in the array !!
 
+
+
+
+
+
+
+
+
+
+
+
     // !! Write a function, returnLongString, that takes in an array of strings and returns all strings concatenated together !!
 
+        //forEach Version
+
+//     function  returnLongString(strings) {
+//         // start with an empty string variable
+//         var bigString = "";
+//
+//         //loop through all string elements and concatenate to string variable
+//
+//         strings.forEach(function(string){
+//             bigString += string;
+//             //bigString = "Justin"
+//             //bisString = "JustinDavid"
+//
+//         });
+//
+//         return bigString;
+//
+//     }
+//
+// var strings = ["Justin", "David", "Jay", "Javier", "Dane"];
+//     console.log(returnLongString(strings));; // returns "JustinDavidJayJavierDane"
+    //return string variable
+
+        // For Loop version
+
+    function returnLongString(strings) {
+        var bigString = "";
+
+        for(var i = 0; i < strings.length; i += 1){
+            console.log(strings[i]); // value changes with each iteration of the loop
+            bigString += strings[i];
+
+
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
     // !! Write a function, returnArrSum, that takes in an array of values and returns the sum of all number elements !!
+
+    // forEach Version
+
+    // function returnArrSum(values){
+    //     //create an output variable
+         var output = 0;
+    //     //loop through the values and add numbers
+    //     values.forEach(function(value){
+    //         if(typeof value === "number"){
+    //         output += value;
+    //         }
+    //         // only add the value if it is a number
+    //         // only add values if value is typeof "number"
+    //     });
+    //
+
+    // for Version
+
+        for(var i = 0; i < values.length; i += 1){
+            if(typeof values[i] === "number"){
+                output += values[i];
+            }
+
+
+        return output;
+
+    }
+
+    var values = [1, null, "hello", 5] //Nanhello
+    returnArrSum(values); //6
+
+
+
+
+
+
+
+
+
 
     /* !! Write a function, checkIfNumInArray, that takes in an array of numbers and a number and returns the string
             'input num in input array' if the second argument is an element in the first argument array
