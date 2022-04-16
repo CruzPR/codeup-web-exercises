@@ -209,26 +209,113 @@
 
     console.log(isVowel("a"));
     console.log(isVowel("c"));
-    console.log(isVowel(1));
+    console.log(isVowel("e"));
     console.log(isVowel("I"));
 
 // Make a function named isConsonant(letter)
-    var vowels = "aeiouAEIOU";
+    
         function isConsonant(str) {
-            if(str === vowels)
+            if(
+                str === "b" ||
+                str === "c" ||
+                str === "d" ||
+                str === "f" ||
+                str === "g" ||
+                str === "h" ||
+                str === "j" ||
+                str === "k" ||
+                str === "m" ||
+                str === "n" ||
+                str === "l" ||
+                str === "p" ||
+                str === "q" ||
+                str === "r" ||
+                str === "s" ||
+                str === "t" ||
+                str === "v" ||
+                str === "w" ||
+                str === "x" ||
+                str === "y" ||
+                str === "z" ||
+                str === "C" ||
+                str === "D" ||
+                str === "F" ||
+                str === "G" ||
+                str === "H" ||
+                str === "J" ||
+                str === "K" ||
+                str === "M" ||
+                str === "N" ||
+                str === "L" ||
+                str === "P" ||
+                str === "Q" ||
+                str === "R" ||
+                str === "S" ||
+                str === "T" ||
+                str === "V" ||
+                str === "W" ||
+                str === "X" ||
+                str === "Y" ||
+                str === "Z" 
+            
+            ) {
+                return true;
+            } 
+                return false;
+        }
+        
+    console.log(isConsonant("b"));
+    console.log(isConsonant("A"));
+    console.log(isConsonant("1"));
+    console.log(isConsonant("Z"));
 
-             {
+// Make a function named isCapital(letter)
+        function isCapital(str) {
+            if(str.toUpperCase() === str) {
                 return true;
             }
                 return false;
         }
-        
-    console.log(isConsonant("a"));    
+    console.log(isCapital("b"));
+    console.log(isCapital("A"));
+    console.log(isCapital("b"));
+    console.log(isCapital("B"));
     
-// Make a function named isCapital(letter)
 // Make a function named isLowerCase(letter)
+    function isLowerCase(str) {
+        if(str.toLowerCase() === str) {
+            return true;
+        }
+        return false;
+    }
+    console.log(isLowerCase("b"));
+    console.log(isLowerCase("A"));
+    console.log(isLowerCase("k"));
+    console.log(isLowerCase("Z"));
+    
 // Make a function named hasLowerCase(string) that returns if a string has any lower cased letter
+    
+    function hasLowerCase(str) {
+        if(str.toUpperCase() !== str) {
+            return str;
+        }
+            return "The string " + str + " does not have any lower cased letters!"
+    }
+    console.log(hasLowerCase("balloon"));
+    console.log(hasLowerCase("AVIATION"));
+    console.log(hasLowerCase("Apple"));
+    console.log(hasLowerCase("SALOON"));
+    
 // Make a function named isSpace(letter) that returns if a character is a space character
+    
+    function isSpace(str) {
+        return str.includes(' ');
+    }
+    console.log(isSpace("Hello there!"));
+    console.log(isSpace("Hellothere!"));
+    console.log(isSpace(" "));
+    console.log(isSpace("1 "));
+    
 // Make a function named isZero(number)
 // Make a function named notZero(input) that returns true if the input is not zero
 // Write a function named lowerCase(string)
