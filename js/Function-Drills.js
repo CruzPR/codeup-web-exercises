@@ -1,6 +1,6 @@
-"use strict";
-(function (){
 
+(function (){
+    "use strict";
 
 // Functions using conditionals but not loops or arrays:
 
@@ -174,14 +174,57 @@
     
     
 // Make a function named isFalsy(input), remember that values other than false behave like false
+    function isFalsy(input) {
+        if(input === Boolean(false)){
+           return true ;
+        }
+           return false ;
+    }
     
+    console.log(isFalsy(1));
+    console.log(isFalsy(-1));
+    console.log(isFalsy(true));
+    console.log(isFalsy(false));
     
-    
-    
-    
-    
-// Make a function named isVowel(letter)
+    // Make a function named isVowel(letter)
+        
+        function isVowel(str) {
+            if(
+                str === "a" ||
+                str === "e" ||
+                str === "i" ||
+                str === "o" ||
+                str === "u" ||
+                str === "A" ||
+                str === "E" ||
+                str === "I" ||
+                str === "O" ||
+                str === "U" 
+                
+            ) {
+                return true;
+            }
+                return false;
+        }
+
+    console.log(isVowel("a"));
+    console.log(isVowel("c"));
+    console.log(isVowel(1));
+    console.log(isVowel("I"));
+
 // Make a function named isConsonant(letter)
+    var vowels = "aeiouAEIOU";
+        function isConsonant(str) {
+            if(str === vowels)
+
+             {
+                return true;
+            }
+                return false;
+        }
+        
+    console.log(isConsonant("a"));    
+    
 // Make a function named isCapital(letter)
 // Make a function named isLowerCase(letter)
 // Make a function named hasLowerCase(string) that returns if a string has any lower cased letter
