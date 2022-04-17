@@ -317,24 +317,189 @@
     console.log(isSpace("1 "));
     
 // Make a function named isZero(number)
+    function isZero(input) {
+        if(input === 0){
+            return true;
+        }
+            return false;
+    }
+    console.log(isZero(0));
+    console.log(isZero("0"));
+    console.log(isZero(NaN));
+    console.log(isZero(10));
+    
 // Make a function named notZero(input) that returns true if the input is not zero
+    function notZero(input) {
+        if(input !== 0) {
+            return true;
+        }
+            return false;
+    }
+    console.log(notZero(0));
+    console.log(notZero("0"));
+    console.log(notZero(NaN));
+    console.log(notZero(10));
+    
 // Write a function named lowerCase(string)
+    function lowerCase(str) {
+        if(str.toLowerCase() === str) {
+            return true;
+        }
+            return false;
+    }
+    console.log(lowerCase("hi"));
+    console.log(lowerCase("HI"));
+    console.log(lowerCase("1"));
+    console.log(lowerCase("Hi"));
+    
 // Write a function named double(n) that returns a number times two
+    function double(n) {
+        return n = n * 2;
+    }
+    console.log(double(4));
+    console.log(double(2847));
+    console.log(double(NaN));
+    console.log(double(3.55));
+    
 // Write a function named triple(n) that returns a number times 3
+    function  triple(n) {
+        return n = n * 3;
+    }
+    console.log(triple(898));
+    console.log(triple(5));
+    console.log(triple("hi"));
+    console.log(triple(34.523));
+    
 // Write a function named quadruple(n) that returns a number times 4
+    function quadruple(n) {
+        return n = n * 4;
+    }
+    console.log(quadruple(32.84));
+    console.log(quadruple("Hello"));
+    console.log(quadruple(23));
+    console.log(quadruple(35325));
+    
 // Write a function named half(n) that returns 1/2 of the provided input
+    function half(n) {
+        return n /= 2 ;
+    }
+    console.log(half(40));
+    console.log(half(32.653));
+    console.log(half("40", 20));
+    console.log(half(-3));
+    
 // Write a function named subtract(a, b) that returns a minus b
+    function subtract(a, b) {
+        return a - b;
+    }
+    console.log(subtract(2, 2));
+    console.log(subtract(-2, -2));
+    console.log(subtract(32.32, 53.92));
+    console.log(subtract("34", 32))
+    
 // Write a function named multiply(a, b) that returns the product of a times b
+    function multiply(a, b) {
+        return a * b;
+    }
+    console.log(multiply(5, 19));
+    console.log(multiply("29.2", 48));
+    console.log(multiply(-2, "23"));
+    console.log(multiply("Hi there!"))
+    
 // Write a function named divide(a, b) that returns a divided by b
+    function divide(a, b) {
+        return a / b;
+    }
+
+    console.log(divide("32", 10));
+    console.log(divide("Hi"));
+    console.log(divide(5334.32, "10.343"));
+    console.log(divide(-345, 325));
+    
 // Write a function named remainder(a, b) that returns the remainder after dividing a by b
-// Make a function named modulo(a, b) that returns the returns the remainder after dividing a by b
+    function remainder(a, b) {
+        return a % b;
+    }
+
+    console.log(remainder(10, 4 ));
+    console.log(remainder(20, 5));
+    console.log(remainder(122, 20));
+    console.log(remainder("39", 9));
+
+// Make a function named modulo(a, b) that returns the remainder after dividing a by b
+    function modulo(a, b) {
+        return a % b;
+    }
+    console.log(modulo(10, 4 ));
+    console.log(modulo(20, 5));
+    console.log(modulo(122, 20));
+    console.log(modulo("39", 9));
+    
 // Write a function named cube(n) that returns n * n * n
+    function cube(n) {
+        return n **= 3;
+    }
+    console.log(cube(3));
+    console.log(cube(100));
+    console.log(cube("Hi there"));
+    console.log(cube("20"));
+    
 // Write a function named squareRoot(n) that returns the square root of the input
+    function squareRoot(n) {
+        return Math.sqrt(n);
+    }
+    console.log(squareRoot(4));
+    console.log(squareRoot(-40));
+    console.log(squareRoot("100"));
+    console.log(squareRoot(20.2));
+    
 // Write a function named cubeRoot(n) that returns the cube root of the input
+    function cubeRoot(n) {
+        return Math.cbrt(n);
+    }
+    console.log(cubeRoot(30));
+    console.log(cubeRoot(100));
+    console.log(cubeRoot(-10));
+    console.log(cubeRoot(null));
+    
 // Write a function named invertSign(number) that returns a negative version of a positive number, a positive version of negative, and false for all else.
+    function invertSign(number) {
+        if(number < 0 || number > 0) {
+            return number = number * -1;
+        } else {
+            return false;
+        }
+    }
+    console.log(invertSign(4));
+    console.log(invertSign(-4));
+    console.log(invertSign(0));
+    console.log(invertSign(4.4));
+    
 // Write a function named degreesToRadians(number)
+    function degreesToRadians(degrees) {
+        return degrees * (Math.PI / 180);
+    }
+    console.log(degreesToRadians(180));
+    console.log(degreesToRadians(360));
+    console.log(degreesToRadians(-180));
+    console.log(degreesToRadians("90"));
+    
 // Write a function named radiansToDegrees(number)
+    function radiansToDegrees(radians) {
+        return radians / (Math.PI / 180);
+    }
+    console.log(radiansToDegrees(1));
+    console.log(radiansToDegrees(-2.6));
+    console.log(radiansToDegrees(0.50));
+    console.log(radiansToDegrees("3.14"));
+    
 // Make a function named isBlank(input) that determines if a given input is spaces, newline characters, or tabs.
+    
+    
+    
+    
+    
+    
 // Make a function named trim(string) that removes empty spaces before and after the input.
 // Make a function named areEqual(input1, input2) that returns if both inputs have the same value
 // Make a function named areIdentical(input1, input2) that returns if both inputs are same value and data type.
