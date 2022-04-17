@@ -494,22 +494,105 @@
     console.log(radiansToDegrees("3.14"));
     
 // Make a function named isBlank(input) that determines if a given input is spaces, newline characters, or tabs.
-    
-    
-    
-    
-    
+    function isBlank(input) {
+        return input.includes(' ') || 
+            input.includes("\n") || 
+            input.includes("\t");
+    }
+    console.log(isBlank(" "));
+    console.log(isBlank("Hi\n,howareyou?"));
+    console.log(isBlank("Hi\thowareyou?"));
+    console.log(isBlank("Hi"));
     
 // Make a function named trim(string) that removes empty spaces before and after the input.
+    function trim(str) {
+        return str.trim();
+    }
+    console.log(trim(" Hi "))
+    console.log(trim("           Hello            "))
+    
 // Make a function named areEqual(input1, input2) that returns if both inputs have the same value
+    function areEqual(input1, input2) {
+        if(input1 == input2) {
+            return "The inputs " +input1+ " and " + input2 + " are equal in value!";
+        } else {
+            return "The inputs are not equal in value!"
+        }
+    }
+    console.log(areEqual(1, 1));
+    console.log(areEqual("Hi", "HI"));
+    console.log(areEqual( 43, 52));
+    console.log(areEqual("Hello", "Hello"));
+    
 // Make a function named areIdentical(input1, input2) that returns if both inputs are same value and data type.
+    function areIdentical(input1, input2) {
+        if(input1 === input2){
+            return "The inputs " +input1+ " and " +input2+ " are identical!";
+        } else {
+            return "The inputs are not identical!"
+        }
+    }
+    console.log(areIdentical(20,20));
+    console.log(areIdentical(20, "20"));
+    console.log(areIdentical("Hi there!", "HI, there!"));
+    console.log(areIdentical(NaN, "Hi"));
+    
 // Make a function named not(input) returns the input with a flipped boolean
+    function not(input) {
+        return !input;
+    }
+    console.log(not(false));
+    console.log(not(true));
+    
 // Make a function named notNot(input) that the negation of the negation of the input.
+    function notNot(input) {
+        return !!input;
+    }
+    console.log(notNot(true));
+    console.log(notNot(false));
+    
 // Make a function named and(predicate1, predicate2) that returns the logical operation of AND
+    
 // Make a function named or(predicate1, predicate2) that returns the logical operation of OR
+    
 // Write a function called reverseString(string) that reverses a string
+    function reverseString(string) {
+        var splittedString = string.split("");
+        console.log(splittedString);
+        var reversedArray = splittedString.reverse();
+        console.log(reversedArray);
+        var joinedArray = reversedArray.join("");
+        return joinedArray;
+    }
+    console.log(reverseString("Puerto"));
+    console.log(reverseString("1, 2, 3, 4, 5"))
+    
+    //with a For Loop!
+    
+    function forMethodReverseString(string) {
+        var newString = []; //empty array for the string.
+        for(var i = string.length - 1; i > 0; i--){
+            newString += string[i]; //Concatenating or appending to the empty array.
+            return newString;
+        }
+    }
+    console.log(forMethodReverseString("12345"));
+    
 // Make a function named absoluteValue(number) that returns the absolute value of a number.
+    function absoluteValue(number) {
+        return Math.abs(number);
+    }
+    console.log(absoluteValue(-32));
+    console.log(absoluteValue(32));
+    
 // Make a function named rollDice(sides) that takes in an argument containing the number of sides the die should have. Generate a random number between 1 up to and including the number of sides.
+    var diceSides = [1, 2, 3, 4, 5]
+    var sides = Math.ceil(Math.random() * (0 + 6));
+    function rollDice(sides) {
+        return "The dice rolled a " +sides+ "!";
+    }
+    console.log(rollDice(sides));
+    
 // Simple Function Drills
 // Make a function called returnTwo() that returns the number 2 when called
 // Test this function with console.log(returnTwo())
