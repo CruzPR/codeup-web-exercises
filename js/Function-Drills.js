@@ -592,42 +592,114 @@
         return "The dice rolled a " +sides+ "!";
     }
     console.log(rollDice(sides));
-    
+
 // Simple Function Drills
+
 // Make a function called returnTwo() that returns the number 2 when called
 // Test this function with console.log(returnTwo())
+    function returnTwo() {
+        return 2;
+    }
+    console.log(returnTwo());
+
 //
 // Make a function called sayHowdy() which console.logs the string “Howdy!”
-//
 // Test this function by directly calling sayHowdy()
-//
-// Remember this function does not need a defined return value
-//
+    function sayHowdy() {
+        console.log("Howdy!");
+    }
+    sayHowdy();
+    // Remember this function does not need a defined return value
+
 // Make a function called returnName() that returns the string of your name
-//
-// Test this function with console.log(returnName())
-//
+    function returnName(name) {
+        return name;
+    }
+
+    console.log(returnName("Sibel"));
+    console.log(returnName("Carlos"));
+    console.log(returnName( 4));
+    console.log(returnName("4"));
+    // Test this function with console.log(returnName())
+
 // Make a function called addThree() which takes in a number input and returns the number plus 3.
 // Test this function with console.log(addThree(5))
-//
+    function addThree(num) {
+        return num += 3;
+    }
+    console.log(addThree(6));
+    console.log(addThree("6"));
+    console.log(addThree(-1));
+    console.log(addThree(true));
+    
 // Make a function called sayString() which returns the string input passed in.
 // Test this function with console.log(sayString('codeup'))
-//
+    function sayString(str) {
+        return str;
+    }
+    console.log(sayString("codeup"));
+
 // Challenge Function Drills
 // Write a function called identity(input) that takes in an argument called input and returns that input.
-//
+    function indentity(input) {
+        return input;
+    }
+    console.log(indentity("Hi codeUp!"));
+    console.log(identity(4));
+    console.log(indentity(NaN));
+    console.log(indentity(4 + 3));
+
+
 // Write a function called getRandomNumber(min, max) that returns a random number between min and max values sent to that function call.
-//
+    function getRandomNumber(min, max) {
+        return Math.ceil(Math.random() * (max - min) + min);
+    }
+
+    console.log(getRandomNumber(1, 100));
+    console.log(getRandomNumber("Hi", 2));
+    console.log(getRandomNumber(-50, 50));
+
 // Write a function called first(input) that returns the first character in the provided string.
-//
+    function first(input) {
+        return input.substring(0,1);
+    }
+    console.log(first("Howdy!"));
+    
 // Write a function called last(input) that returns the last character of a string
-//
+    function last(input) {
+        return input.substring(input.length - 1, );
+    }
+    console.log(last("Boricua!"));
+    
 // Write a function called rest(input) that returns everything but the first character of a string.
-//
+    function rest(input) {
+        return input.substring( 1 ,  );
+    }
+    console.log(rest("Turkey"));
+    
 // Write a function called reverse(input) that takes a string and returns it reversed.
-//
+    function reverse(input) {
+        var string = [];
+        string += input;
+        var splittedInput = string.split("");
+        var reversedInput = splittedInput.reverse();
+        return reversedInput.join("");
+    }
+    console.log(reverse("Himalaaaya"));
+    
 // Write a function called isNumeric(input) that takes an input and returns a boolean if the input is numeric.
-//
+    function isNumeric(input) {
+        if(typeof input === "number"){
+            return true;
+        } else {
+            return false;
+        }
+    }
+    console.log(isNumeric(4));
+    console.log(isNumeric("3"));
+    console.log(isNumeric(NaN));
+    console.log(isNumeric(0));
+    
 // Write a function called count(input) that takes in a string and returns the number of characters.
 //
 // Write a function called add(a, b) that returns the sum of a and b
