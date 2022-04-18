@@ -701,15 +701,50 @@
     console.log(isNumeric(0));
     
 // Write a function called count(input) that takes in a string and returns the number of characters.
-//
+    function count(input) {
+        return input.length;
+    }
+    console.log(count("Hi there!"));
+    console.log(count(""));;
+    console.log(count(1));
+    
 // Write a function called add(a, b) that returns the sum of a and b
-//
+    function add(a,b) {
+        return  a + b;
+    }
+
+    console.log(add(2, 5));
+    console.log(add(-5, 5));
+    console.log(add(3.554, 3));
+    console.log(add("Hi there", ", how are you?"));
+    
 // Write a function called subtract(a, b) that return the difference between the two inputs.
-//
+    function subtract(a,b) {
+        return a - b;
+    }
+
+    console.log(subtract(4.32, 89));
+    console.log(subtract("Hi there", ", how are your?"));
+    console.log(subtract(34,34));
+    
 // Write multiply(a, b) function that returns the product
-//
+    function multiply(a,b) {
+        return a * b;
+    }
+
+    console.log(multiply(3, 23.43));
+    console.log(multiply("Hi there, ", "how are you?"));
+    console.log(multiply(0, 3435.98));
+    console.log(multiply(69,69));
+    
 // Write a divide(numerator, denominator) function that returns a divided by b
-//
+    function divide(numerator, denominator) {
+        return numerator / denominator;
+    }
+    console.log(divide(100, 10));
+    console.log(divide(23.23, 3));
+    console.log(divide("Hi", " there"));
+    
 // Write a remainder(number, divisor) function that returns the remainder left over when dividing number by the divisor
 //
 // Write the function square(a) that takes in a number and returns the number multiplied by itself.
