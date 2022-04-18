@@ -744,15 +744,55 @@
     console.log(divide(100, 10));
     console.log(divide(23.23, 3));
     console.log(divide("Hi", " there"));
-    
+
 // Write a remainder(number, divisor) function that returns the remainder left over when dividing number by the divisor
-//
+    function remainder(number, divisor) {
+        return number % divisor;
+    }
+    console.log(remainder(100, 10));
+    console.log(remainder(40, 3));
+    console.log(remainder(NaN, 10));
+    console.log(remainder(0, 0 ));
+    
 // Write the function square(a) that takes in a number and returns the number multiplied by itself.
-//
+    function square(num) {
+        return Math.sqrt(num);
+    }
+    console.log(square(4));
+    console.log(square(120));
+    console.log(square(-40.2));
+    console.log(square("hi"));
+    
 // Write a function called sumOfSquares(a, b) that uses only your add() function and your square function and not + or * operators
-//
+    function sumOfSquares(square1, square2) {
+        return Math.sqrt(square1) + Math.sqrt(square2);
+    }
+    console.log(sumOfSquares(30, 20));
+    console.log(sumOfSquares(100, 10));
+    console.log(sumOfSquares("Hi", 100));
+    
 // Write a function called doMath(operator, a, b) that takes 3 parameters. The first parameter is the name of the math function you want to apply. a and b are the two numbers to run that function on.
-//
+    function doMath(operator, a, b) {
+        if(operator === "+") {
+            return a + b;
+        } else if(operator === "-") {
+            return a - b;
+        } else if(operator === "*") {
+            return a * b;
+        } else if(operator === "/") {
+            return a / b;
+        } else if(operator === "%") {
+            return a % b;
+        } else {
+            return "I only accept '+', '-', '*', '/', '%' and operators!"
+        }
+    }
+    console.log(doMath("-",100,10));
+    console.log(doMath("+", 30, 30));
+    console.log(doMath("*", 50, 50));
+    console.log(doMath("/", 40, 2));
+    console.log(doMath("%", 80, 3));
+    
 // Even More Function Bonuses
 // Create a function that will return how many whitespace characters are at the beginning and end of a string.
 //
