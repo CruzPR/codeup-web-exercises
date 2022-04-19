@@ -138,11 +138,7 @@ calculateTip(10, 100);
 // }
 // applyDiscount(100.00, 0.5);
     
-    function applyDiscount(orgPrice,discountPercent) {
-        return orgPrice + (orgPrice + discountPercent);
-    }
 
-    console.log(applyDiscount(100, .2));
 
 
 })();

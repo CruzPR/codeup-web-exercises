@@ -77,9 +77,47 @@
     ];
     //
     // 1. Log the names of all users in a single console log separated by spaces. // output = "Sam Cathy Karen"
+    // users.forEach(function(user){
+    //     console.log(user.givenName);
+    // });
+
+    var output = "";
+    users.forEach(function(user){
+       output += user.givenName + " "; // add space after name
+    });
+    console.log(output.trim()); //trim the extra space for the last name
+    /*
+    *   user.forEach(function(user){
+    *      output.push(user.givenName);
+        });
+    *console.log(output.join(' '));
+    *
+    *
+    *
+    * */
+
+
+
     // 2. Change the names of all users to "John Doe"
+    users.forEach(function(user){
+        user.givenName = "John Doe";
+    });
+    console.log(users);
+    console.log(users[0].age);
     // 3. Increase the current age of all users by 1
-    //
+    // users.forEach(function(userAge){
+    //      userAge.age = users.age + 1;
+    // })
+    // console.log(users)
+    //     for(var i = 0; i < 0; i++){
+    //         users[i].age += 1; //substitutes index 0+ for i so I can loop it.
+    //     }
+        users.forEach(function(user){
+            user.age +=  1;
+        })
+    //CHROME PROCESSES IT BEFORE, BEWARE!
+
+
     // Can you accomplish each step using iteration?
 
 
