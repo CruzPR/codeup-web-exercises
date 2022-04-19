@@ -40,7 +40,7 @@ var myName = "Carlos";
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
-var random = Math.floor((Math.random() * 3) + 1);
+var random = Math.floor((Math.random() * 3) + 1); // 1 is to account for the 0
 
 /**
  * TODO:

@@ -69,8 +69,14 @@
 // Make a function named isMultipleOfFive(input)
     
     function isMultipleOfFive(num){
-        return num * 5;
-    }
+        function isMultipleOfFive(input) {
+            if(input % 5 === 0) {
+                return true;
+            }
+            return false;
+        }
+        console.log(isMultipleOfFive(55));
+
 
     console.log(isMultipleOfFive(5));
     console.log(isMultipleOfFive("5"));

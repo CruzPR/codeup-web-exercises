@@ -56,7 +56,7 @@
             //     Write a function named `randomNumber` that takes in an input and returns a random number
             //     between zero and the value of the input.
 
-            function randomNumber(){
+            function randomNumber(input){
                 return (Math.random() * input);
             }
             
@@ -72,7 +72,7 @@
             //     more than one character or is not in the first input at all, it should return false.
 
             function indexOfCharacter(input1, input2){
-                if(input2.length > 1 || input1.indexOf(input2) === -1){
+                if(input2.length > 1 || input1.indexOf(input2) === -1){ // -1 is false
                     return false
                 }
                     return input1.indexOf(input2);
