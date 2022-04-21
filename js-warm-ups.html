@@ -1,10 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Morning JS Warm Up Exercises</title>
 </head>
 <body>
-$END$
+
+<h1>Morning JS Warm Ups</h1>
+
+<script>
+    "use strict";
+
+    //Functions should not mutate the array, it should output to an empty array.
+
+    var oldArray = [1, 2, 3, 4, 5];
+
+
+    // ================================= WARM UP
+
+    //     Write a function, returnFirstAndLast, that takes in an array of values and returns an array of just the first and last elements. Assume the input array contains at least two elements. The function should not mutate the input array.
+    //     function returnFirstAndLast(array) {
+    //     //     var newArray = [];
+    //     //      let first = array.at(0);
+    //     //      let second = array.at(-1);
+    //     //      newArray = first + second;
+    //     //      return newArray
+    //     // }
+    //     //
+    //     //
+
+            function returnFirstAndLast(inputArr) {
+               // var outputArray = [];
+                var firstElement = inputArr[0];
+                var lastElement = inputArr[inputArr.length - 1];
+                return [firstElement, lastElement];
+                // outputArray.push(firstElement);
+                // outputArray.push(secondElement);
+                // return outputArr;
+                // [inputArr[0], inputArr[inputArr.length - 1]]; //third way!
+                // YOU FORGOT THE , AT THE RETURN STATEMENT!
+            }
+
+
+
+    //     Examples...
+
+    console.log(returnFirstAndLast([1, 2, 3, 4]));// returns [1, 4]
+    console.log(returnFirstAndLast(['hello', 'bob', 7, null, 'world'])); // returns ['hello', 'world']
+    console.log(returnFirstAndLast(['hello', 'world'])); // returns ['hello', 'world']
+
+
+    // Write a function, returnEveryOtherElement, that takes in an array of inputs and returns an array of every other input, starting with the first. Assume the array will contain at least three elements. The function should not mutate the input array.
+
+        // Examples...
+    function returnEveryOtherElement(array) {
+        //create an output variable for every other element array
+        // loop through the input array and if the index is odd continue
+        // if the index is even add the array element into the output array
+        // return output array at the end of the function.
+        var outputArray = [];
+        for(var i = 0; i < array.length; i += 1) {
+            if (i % 2 === 0) {
+                outputArray.push(array[i]); // I was missing this
+            }
+            return outputArray;
+        }
+    }
+
+        console.log(returnEveryOtherElement([1, 2, 3, 4, 5]));// returns [1, 3, 5]
+        console.log(returnEveryOtherElement([1, 2, 3])); // returns [1, 3]
+        console.log(returnEveryOtherElement(['bob', 'sally', 'cathy', 'fred'])); // returns ['bob', 'cathy']
+        console.log(returnEveryOtherElement([10, 9, 8, 7, 6, 5, 4, 3, 2, 1])); // returns [10, 8, 6, 4, 2]
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+</script>
+
 </body>
 </html>
