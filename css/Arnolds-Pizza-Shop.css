@@ -1,0 +1,25 @@
+body{
+    margin: 0;
+    background-color: orange;
+    text-align: center;
+    color: maroon;
+
+}
+.openingLine{
+    width: 600px;
+    height: 100px;
+    margin: auto;
+}
+hr{
+    border: 3px solid maroon;
+}
+.arnoldPic1{
+    max-height: 450px;
+    max-width: 450px;
+}
+.img1{
+  margin: 200px;
+}
+.midline{
+
+}
