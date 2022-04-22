@@ -1,7 +1,88 @@
 .fancy-header {
-    color: purple;
+    color: red;
     text-decoration: underline;
+    text-align: center;
+    background-color: #000;
+    width: 510px;
+    height: 40px;
+    margin: auto;
 }
 
 
 
+.fancy-headers{
+    color: cornflowerblue;
+    text-decoration: underline;
+    background-color: #000;
+    width: 150px;
+    height: 30px;
+}
+
+p{
+    background-color: black;
+    width: 530px
+}
+
+.vision {
+    color: cornflowerblue;
+    text-decoration: underline;
+    background-color: #000;
+    width: 190px;
+
+}
+
+body{
+    background-color: #3b3b4f;
+    background-image: url("/img/matrixbackground.jpg");
+    color: lawngreen;
+    background-size: contain;
+    font-family: 'Share Tech Mono', monospace;
+    margin: auto;
+
+
+}
+
+ul li {
+    list-style: upper-latin;
+
+}
+
+ol li {
+    list-style: upper-alpha;
+}
+
+table{
+    font-size: 20px;
+    background-color: black;
+    padding: 30px;
+
+}
+
+
+
+a:hover{
+    color: blue;
+}
+
+a:active{
+    color: lawngreen;
+}
+
+a:visited{
+    color: red;
+}
+
+a{
+    color: white;
+    background-color: black;
+}
+
+a:link{
+    color: gray;
+
+}
+
+p .products{
+    background-color: black;
+    width: 100px;
+}
