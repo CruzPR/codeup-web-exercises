@@ -1,3 +1,9 @@
+*{
+    margin: 0;
+
+
+}
+
 .fancy-header {
     color: red;
     text-decoration: underline;
