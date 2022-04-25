@@ -1,0 +1,52 @@
+:root {
+
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Ubuntu, sans-serif;
+}
+
+.message-info{  /* BLUE */
+    color: blue;
+    border-radius: 5px;
+    background-color: hsla(205,50%,50%,0.3);
+    width: 600px;
+    height: 20px;
+    padding: 5px 5px;
+    margin: 10px;
+
+}
+
+.message-success{  /* GREEN */
+    color: green;
+    border-radius: 5px;
+    background-color: hsla(123,50%,50%,0.3);
+    width: 600px;
+    height: 20px;
+    padding: 5px 5px;
+    margin: 10px
+}
+
+.message-warning{   /* YELLOW */
+    color: hsl(67, 100%,37%) ;
+    border-radius: 5px;
+    background-color: hsla(60,50%,50%,0.3);
+    width: 600px;
+    height: 20px;
+    padding: 5px 5px;
+    margin: 10px;
+}
+
+.message-error{   /* RED */
+    color: red;
+    border-radius: 5px;
+    background-color: hsla(0,50%,50%,0.3);
+    width: 600px;
+    height: 20px;
+    padding: 5px 5px;
+    margin: 10px;
+}
