@@ -1,5 +1,12 @@
 :root {
-
+    --text-info: blue;
+    --text-success: green;
+    --text-warning: hsl(67, 100%,37%) ;
+    --text-error: red;
+    --bg-info: hsla(205,50%,50%,0.3);
+    --bg-success: hsla(123,50%,50%,0.3);
+    --bg-warning: hsla(60,50%,50%,0.3);
+    --bg-error: hsla(0,50%,50%,0.3);
 }
 
 body, html {
@@ -11,9 +18,9 @@ body, html {
 }
 
 .message-info{  /* BLUE */
-    color: blue;
+    color: var(--text-info);
     border-radius: 5px;
-    background-color: hsla(205,50%,50%,0.3);
+    background-color: var(--bg-info) ;
     width: 600px;
     height: 20px;
     padding: 5px 5px;
@@ -22,9 +29,9 @@ body, html {
 }
 
 .message-success{  /* GREEN */
-    color: green;
+    color: var(--text-success);
     border-radius: 5px;
-    background-color: hsla(123,50%,50%,0.3);
+    background-color: var(--bg-success);
     width: 600px;
     height: 20px;
     padding: 5px 5px;
@@ -32,9 +39,9 @@ body, html {
 }
 
 .message-warning{   /* YELLOW */
-    color: hsl(67, 100%,37%) ;
+    color: var(--text-warning);
     border-radius: 5px;
-    background-color: hsla(60,50%,50%,0.3);
+    background-color: var(--bg-warning);
     width: 600px;
     height: 20px;
     padding: 5px 5px;
@@ -42,9 +49,9 @@ body, html {
 }
 
 .message-error{   /* RED */
-    color: red;
+    color: var(--text-error);
     border-radius: 5px;
-    background-color: hsla(0,50%,50%,0.3);
+    background-color: var(--bg-error);
     width: 600px;
     height: 20px;
     padding: 5px 5px;
