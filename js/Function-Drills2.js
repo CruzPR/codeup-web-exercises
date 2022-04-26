@@ -1,6 +1,20 @@
 (function(){
     "use strict";
 
+    // Write a javascript function that takes in a string, and returns the string in alphabetical order.
+    //     EX: 'webmaster' -> 'abeemrstw'
+    // 'developer' -> deeeloprv
+
+        function stringAlphabeticalOrder(string)  {
+            // let strArray = string.split('');
+            // let alphabeticalOrder = strArray.sort();
+            // let result = alphabeticalOrder.join();
+            // return result;
+            return string.split('').sort().join('')
+        }
+        console.log(stringAlphabeticalOrder("developer"));
+
+
     //     Functions using conditionals but not loops or arrays:
     
         function addOne(input) {
