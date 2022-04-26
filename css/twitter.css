@@ -85,6 +85,8 @@ line-height: 80px;
 }
 .text-muted {
     color: var(--main-link-color);
+    display: flex;
+
 }
 .media {
     width: 100%;
