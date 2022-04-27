@@ -1,0 +1,17 @@
+:root{
+    --nav-bar-letters(color: black);
+    --nav-bg-color(color: grey);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+a:hover {
+    color: #3B94D9;
+    display: inline-block;
+}
+
+.navBar{
+
+}
