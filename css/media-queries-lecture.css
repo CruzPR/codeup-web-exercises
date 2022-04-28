@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1200px;
+    padding:0;
+    margin: auto;
+    background-color: #fafafa;
+}
+
+
+h1 {
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 16px
+}
+
+header {
+    background-color: green;
+    padding: 5px;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 100%;
+    border: 1px solid grey;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.card-body {
+    font-size: 15px;
+}
+
+.card:nth-child(odd) {
+    background-color: lightgray;
+}
+
+.card-footer {
+    margin-top: 5px;
+}
+
+.btn-primary {
+    background-color: green;
+
+    padding: 3px;
+    border-radius: 3px;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+
+    background-color: lightgreen;
+}
+
+main {
+    padding: 20px;
+}
+
+.link-group {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.link-group a {
+    width: 100%;
+}
+
+.link-group:nth-of-type(2), .link-group:nth-of-type(3) {
+    display: none;
+}
+
+
+
+/* TODO: (TOGETHER) Implement common breakpoints and apply styling to components */
+
+@media screen and (min-width: 576px){
+    .card{
+        width: 50%;
+    }
+    .link-group{
+        width: 50%;
+    }
+    .link-group:nth-of-type(2) {
+         display: flex;
+     }
+
+}
+@media screen and (min-width: 768px){
+    .card{
+        width: 33%;
+    }
+    .link-group{
+        width: 33%;
+    }
+    .link-group:nth-of-type(3) {
+        display: flex;
+    }
+}
+@media screen and (min-width: 992px){
+    .card{
+        width: 25%;
+    }
+}
+@media screen and (min-width: 1200px){
+    .card{
+        width: 20%;
+    }
+}
