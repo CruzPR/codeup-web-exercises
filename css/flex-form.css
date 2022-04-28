@@ -35,6 +35,7 @@ body {
     /* TODO: Add an automatic margin and a flex container to this selector */
     display: flex;
     margin: auto;
+    justify-content: center;
 }
 
 .flex-form > * {
