@@ -1,3 +1,8 @@
+:root{
+    --border-color: rgba(0,0,0,0.5);
+}
+
+
 .jumbotron{
     background-image: url(/img/pizza.png);
     height: 346px;
@@ -8,5 +13,18 @@ h1 {
 }
 .card1{
     margin-top: 83px;
-    border: 1px solid black;
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    background-color: tomato;
+    border-radius: 5px;
+}
+.card-header {
+    background-color: #ece1be;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+ul {
+    border: 1px solid var(--border-color);
+
+
 }
