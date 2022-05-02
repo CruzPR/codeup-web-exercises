@@ -1,0 +1,12 @@
+.jumbotron{
+    background-image: url(/img/pizza.png);
+    height: 346px;
+    background-size: cover;
+}
+h1 {
+    margin: 100px;
+}
+.card1{
+    margin-top: 83px;
+    border: 1px solid black;
+}
