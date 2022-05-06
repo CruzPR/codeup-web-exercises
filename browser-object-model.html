@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Browser Object Model</title>
+</head>
+<body>
+
+<script>
+  // (function() {
+  //     "use strict";
+
+
+  // Window Object
+  // global, accccess on any page. It applied to the given tab that you are on.
+
+  // window.alert()
+  //
+  // alert();
+
+
+  // system dialogs
+
+  // alert
+
+  //window.alert("Hello");
+  // notification of something, doesent return a value or its not expected to have any boolean logic.
+
+
+  // confirm
+  //confirm("Are you a codeup student?")
+
+  // is this person a student or not?
+  // var isStudent = confirm("Are you a student?"); //returns a boolean value
+  // console.log("isStudent :", isStudent); // true or false
+  //
+  // // trying to have a condition that will output an alert if the person is a student.
+  // if(isStudent) {
+  //     //alert("They are a student!");
+  //     var studentName = prompt("What is your name?");
+  //     console.log("studentName:", studentName)
+  //     alert(studentName + " is the students name.")
+  // } else {
+  //     alert("Have a good day!");
+  // }
+  // value determines if we display this alert or not.
+
+  // prompt ->
+
+  // interval and timeouts
+
+  // two methods again on the window class
+  // does not lock up your code!
+  // Async
+
+  //1. run code repeatedly at a given time frame, so for example ever 30 seconds, every, every hour
+  // function callbackFn() {
+  //     // do something?
+  //     console.log("run again!")
+  // }
+  //
+  // var intervalTime = 1000; //1 second
+  //
+  // var stopInterval = setInterval(callbackFn, intervalTime)
+  //
+  // console.log("Who goes first?")
+  //
+  //
+  // // what if you want to cancel it?
+  var counter = 0;
+  var doAction = setInterval(function () {
+    console.log("Second Interval")
+    counter++;
+    if(counter >= 20) clearInterval(doAction)
+  }, 500)
+  //
+  // // This just for cancelling current intervals.
+  // //clearInterval(doAction);
+  //
+  //
+  // //1. It only runs once.
+  //
+  // var delay = 1200
+  //
+  // function timeoutCallBackFn() {
+  //    // alert("Are you ready!"); //is not ASYNC
+  // }
+  // // It runs only once after the delay is complete, so if the delay is 1200ms. It will run after
+  // // 1200ms and then it's completely done.
+  // setTimeout(timeoutCallBackFn, delay)
+  //
+  //
+  // var doTimeout = setTimeout(function () {
+  //     console.log("Too slow! I win!")
+  // }, 10000)
+  //
+  //
+  // // Specify the variable name of the timeout that you want to cancel
+  // // timeout needs to be assigned a variable for this.
+  // clearTimeout(doTimeout)
+  //
+  //
+  // // after 5 seconds, we will cancel the first setInterval using a setTimeout.
+  //
+  // function myStopInterval () {
+  //     console.log("Canceling the first interval timer")
+  //     clearInterval(stopInterval);
+  // }
+  //
+  // setTimeout(myStopInterval,5000)
+
+  // window.location
+  // where you are on that given document or window
+
+
+  // // GOTO that location
+  // setTimeout(function() {
+  //     window.location = "https://www.google.com"
+  // }, 5000)
+
+
+  //reload the page.
+  setInterval(function () {
+    location.reload();
+  },5000);
+
+
+
+  // })();
+</script>
+</body>
+</html>
