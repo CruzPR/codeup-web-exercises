@@ -13,9 +13,13 @@
 var total = 0;
 
 function average(array) {
-    for(var i = 0; i < array.length; i++) {
-        total += array[i]; // Adding the sum of all [i] values to total.
-    }
+    // for(var i = 0; i < array.length; i++) {
+    //     total += array[i]; // Adding the sum of all [i] values to total.
+    // }
+    // return total / array.length;
+    array.forEach(function(number) {
+        total += number;
+    })
     return total / array.length;
 }
     console.log(average([3, 5, 7, 10, 0]));
