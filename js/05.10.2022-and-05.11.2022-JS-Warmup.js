@@ -20,8 +20,9 @@ function calculateTotalStudents(arrayOfObjects) {
 
 //convertToObject("Intro to Programming", 20) returns {class: "Intro to Programming", students: 20}
 
-
-
+    function convertToObject(string,num) {
+    return {class: string, number: num} // You are just converting 2 arguments into an object this simple way.
+    }
 
 
 var neighborhood1 ={
@@ -69,6 +70,6 @@ var neighborhood3 ={
         var totalRating = 0;
         for (var i = 0;i < neighborhoodObject.schools[i].length; i++) {
             totalRating += neighborhoodObject.schools[i].rating;
-        }
+        } // Re-using yesterday's loop to help here, just changed the objects to reflect the desired output.
         return neighborhoodObject.medianHomePrice < 300000 && neighborhoodObject.crimeRate === "low";
     }
