@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>DOM Warmup</title>
-</head>
-<body>
 
-<script>
 "use strict";
 
 // Write a function that accepts an array of numbers and returns the average.
@@ -45,7 +37,3 @@ function average(array) {
 
 
 
-
-</script>
-</body>
-</html>
