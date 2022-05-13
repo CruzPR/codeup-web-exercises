@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Practice</title>
+</head>
+<body>
+<p id="doubleSize">Double-click me</p>
+
+
+
+
+
+
+
+
+
+
+<script>
+    (function(){
+    "use strict";
+
+    var para = document.getElementById("doubleSize")
+    var fontSize = window.getComputedStyle(document.getElementById("doubleSize")).fontSize
+    function logSize (e) {
+        console.log(fontSize)
+    }
+    para.addEventListener('dblclick', logSize)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    })();
+</script>
+</body>
+</html>
