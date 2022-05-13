@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document Object Model</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .question {
+      padding: 10px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<h1>Lets practice DOM!</h1>
+
+<div class="question">
+  <h1>Question 1</h1>
+  <input type="color" id="color">
+  <button type="button" id="changeColor">Button!</button>
+</div>
+
+<div class="question">
+  <h1>Question 2</h1>
+  <input type="text" id="todo">
+  <button type="button" id="addTodo">Add Todo</button>
+  <ul id="todosList">
+  </ul>
+</div>
+
+
+<div class="question">
+  <h1>Question 3</h1>
+  <p>All these H1 Tags should be changing size!</p>
+  <button id="toggleH1">Toggle!</button>
+</div>
+
+<div class="question">
+  <br>
+  <br>
+  <h1>Question 4</h1>
+  <br>
+  <br>
+</div>
+<div class="question">
+  <h1>Question 5</h1>
+  <button id="google">Google</button>
+</div>
+<div class="question">
+  <h1>Question 6</h1>
+  <label for="userInput">Enter String here: </label>
+  <input type="text" id="userInput" placeholder="Enter something to add!">
+  <button id="submitString">Add</button>
+  <p id="madLib">Hello</p>
+</div>
+
+<script>
+
+  'use strict'
+  //     DOM Practice Question #1
+  //     Create an HTML file called dom-practice.html in codeup-web-exercises repos.
+  // Put a text input on an html page with id of "color"
+  // Put a button on the page with id of "changeColor"
+  // Use an Event listener to trigger when the button is clicked.
+  //         Use the value to change the background-color of the page to match the user's input value.
+  //         example of input: "#00000", "black", "#FF00FF"
+
+  var button = document.getElementById("changeColor");
+  var color = document.querySelector("#color");
+  var body = document.querySelector("body");
+
+  color.addEventListener("change", (e) => console.log("e :", e.target.value));
+
+  button.addEventListener("click", function (e) {
+    console.log("e:", e)
+    body.style.backgroundColor = color.value
+  })
+
+
+  // DOM Practice Question #2
+
+  // 1. Create a button with the id of addTodo. Create an input of type text with the id of "todo"
+  // 2. Create an unordered list with the id="todosList"
+  // 4. When the add button is clicked:
+  //       a. Make it such that the value from the input is added to a list items.
+  //          example: <li>input</li> inside of <ul>
+  //       b. Reset the value in the addTodos input.
+  // 5. If the value for the input is empty. Prevent it from creating another <li> element
+
+  // DOM Practice Question #3
+
+  // Part 1:
+  // Every 1 seconds take the H1 tags and change the font size to 10px.
+  // If its already 10px set it to 20px;
+
+  // Part 2:
+  // Add a toggle button with id of "toggleH1"
+  // use that button to stop and restart the h1 tags from changing size.
+
+
+
+  // DOM Question #4
+
+  // When the mouse enters the content area of the 4th div with the class of "question", an alert should pop up
+  // that reads "CONGRATULATIONS ON YOUR NEW CRUISE!";
+
+
+
+  // DOM Question# #5
+
+  // When a user clicks a button labeled "Google" the user should be redirected to the "https://google.com"
+
+
+  // DOM Question #6
+
+  // When the user types something into an input element, the value should be concatenated
+  // onto the paragraph with the ID of "madLib" once the submit button has been clicked.
+
+
+
+</script>
+</body>
+
+</html>
