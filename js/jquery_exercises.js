@@ -45,7 +45,10 @@ $(document).ready(function(){
             "border-color": "brown",
             "box-shadow": "0px 5px 8px brown"
         })
-
+        $("h1, p, li").css({
+            "background-color": "beige",
+            "opacity": "0.8"
+        })
 
 
 
