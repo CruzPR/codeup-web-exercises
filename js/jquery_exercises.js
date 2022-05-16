@@ -49,7 +49,19 @@ $(document).ready(function(){
             "background-color": "beige",
             "opacity": "0.8"
         })
-
+        $("h1").click(function(){
+            $("h1").css("background-color","blue")
+        })
+        $("p").dblclick(function(){
+            $("p").css("font-size","18px")
+        })
+        $("li").hover(function(){
+            $(this).css("color","red")
+        })
+        $("li").hover(function(){
+            $(this).css("color","black")
+        })
+        
 
 
 
