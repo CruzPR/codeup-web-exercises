@@ -51,10 +51,16 @@ $(document).ready(function(){
         })
         $("h1").click(function(){
             $("h1").css("background-color","blue")
+        // $("h1").click(function(e) {
+            //e.target.style.backgroundColor = "red";
+            
         })
         $("p").dblclick(function(){
             $("p").css("font-size","18px")
         })
+        // $("p").dblclick(function(e) {
+        // e.target.style.fontSize = "18px";
+    
         $("li").hover(function(){
             $(this).css("color","red")
         })
@@ -62,7 +68,12 @@ $(document).ready(function(){
             $(this).css("color","black")
         })
         
-
+        // function hoverIn() {
+        // e.target.style.color = "red";    
+        // }
+        // function hoverOut() {
+        // e.target.style.color = "black";
+        //}
 
 
 
