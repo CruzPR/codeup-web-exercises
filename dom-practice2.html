@@ -93,11 +93,51 @@
   //       b. Reset the value in the addTodos input.
   // 5. If the value for the input is empty. Prevent it from creating another <li> element
 
+  var todoButton = document.getElementById("addTodo");
+  var todoInput = document.getElementById("todo");
+  var todoList = document.querySelector("#todoList");
+
+  todoButton.addEventListener("click", function(){
+      if(todoInput.value === "") return; // when value is empty, return nothing.
+      todoList.innerHTML += "<li>" + todoInput.value + "</li>" // targets the value of the input.
+      todoInput.value = ""; // resetting value
+  })
+
   // DOM Practice Question #3
 
   // Part 1:
-  // Every 1 seconds take the H1 tags and change the font size to 10px.
+  // Every 1 seconds take the H1 tags and change the font size to 10px. // use setInterval()
   // If its already 10px set it to 20px;
+
+  function intervalFunction() {
+    var h1 = document.getElementsByTagName("h1");
+
+    for(var i = 0; i < h1.length; i++){
+      var currentSize = h1[i].style.fontSize;
+
+      if(currentSize === "10px") {
+        h1[i].style.fontSize = "20px";
+      } else {
+        h1[i].style.fontSize = "10px";
+      }
+    }
+  }
+  var interval;
+  // var interval = setInterval(intervalFunction, 1000); // for reference
+  var toggleH1s = document.querySelector("#toggleH1");
+  var isOn = false;
+
+  toggleH1s.addEventListener("click",function () {
+    // need to know current state if on or off?
+    isOn = !isOn;
+    if(isOn){
+      interval = setInterval(intervalFunction, 1000);
+    } else {
+    //need to clear the interval
+    clearInterval(interval);
+    //need tot reset the interval.
+  }
+  })
 
   // Part 2:
   // Add a toggle button with id of "toggleH1"
@@ -110,18 +150,38 @@
   // When the mouse enters the content area of the 4th div with the class of "question", an alert should pop up
   // that reads "CONGRATULATIONS ON YOUR NEW CRUISE!";
 
+  // var questionFour = document.getElementsByClassName("question")[3]; //4TH DIV = 3 INDEX
 
+  var questionFour = document.querySelector(".question:nth-of-type(4)")
+
+  questionFour.addEventListener("mouseenter",function(){
+    alert("CONGRATULATION ON YOUR CRUISE!");
+  })
 
   // DOM Question# #5
 
   // When a user clicks a button labeled "Google" the user should be redirected to the "https://google.com"
 
+  var redirectButton = document.getElementById("google");
+
+  redirectButton.addEventListener("click", function() {
+    // window.location = "https://www.google.com"; // anchor tagging through JS
+      location.assign("https://www.google.com");
+  })
 
   // DOM Question #6
 
   // When the user types something into an input element, the value should be concatenated
   // onto the paragraph with the ID of "madLib" once the submit button has been clicked.
 
+  var madLibButton = document.getElementById("submitString");
+  var madLibInput = document.querySelector("#userInput")
+  var madLibString = document.querySelector("#madLib")
+
+
+  madLibButton.addEventListener("click", function(){
+    madLibString.innerHTML += madLibInput.value;
+  })
 
 
 </script>
