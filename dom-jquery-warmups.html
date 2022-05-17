@@ -9,7 +9,13 @@
 <!-- TODO: add functionality such that the number in the input will be added to the total in the h1 when the button is clicked
       No changes to the existing HTML is needed, other than adding jQuery or JavaScript.
 -->
-<h1 id="number-output">0</h1>
+<h1 id="number-output">0</h1> //console.log($("#number-output").text()) <-- when using jQuery
+    // console.log($("#number-input").val()); for the value
+    //when the user clicks the button, alert something
+    // $("#add-btn").click(function(e) { // put e to prevent default submit behavior.
+            e.preventDefault();
+            alert("");
+        });
 <form>
     <input id="number-input" type="number" min="0" max="100">
     <button id="add-btn">Add</button>
@@ -24,9 +30,29 @@
         // TODO: add functionality such that the number in the input will be added to the total in the h1 when the button is clicked
         // No changes to the existing HTML is needed, other than adding the needed jQuery/JavaScript.
 
+        $("#add-btn").click(function(e) { // target the button and add a click listener
+            e.preventDefault();
+            let inputNumber = parseFloat($("#number-input").val());   // take the input value and parse it, then put it in a variable.
+            let outputNumber = parseFloat($("#number-output").text());  //take the output inside the html and parse it, then put it in a variable.
+            $("#number-output").text(inputNumber + outputNumber); // add the input to the output
+        });
 
 
+        // jQuery Solution
+        $('button').click(function(e) {
+            e.preventDefault();
+            let input = parseFloat($('#number-input').val());
+            let output = parseFloat($('#number-output').text());
+            $('#number-output').text(input + output);
+        });
 
+        // Vanilla JS Solution
+        document.querySelector('button').addEventListener('click', function(e) {
+            e.preventDefault();
+            let input = parseFloat(document.querySelector('#number-input').value);
+            let output = parseFloat(document.querySelector('#number-output').innerText);
+            document.querySelector('#number-output').innerText =  input + output;
+        });
 
 
 
