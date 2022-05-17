@@ -100,6 +100,7 @@
         <li>Giant Sequoias and Mariposa Grove: Mariposa Grove contains about 500 mature giant sequoias. </li>
         <li>There are 840 miles of trails to hike in Yosemite National Park</li>
     </ul>
+    <button id="button" type="submit">DO NOT CLICK!</button>
 
 
 
@@ -124,6 +125,19 @@
         $("dt").click(function() {
             $(this).css("background-color", "yellow");
         });
+
+        $("#button").click(function() {
+                $("ul").each(function (){
+                $(this).children().last().css("background-color", "yellow")
+                });
+            });
+
+        $("h3").click(function() {
+                $("ul").each(function(){
+                    $(this).next().children().css("font-weight", "bold");
+        });
+        });
+
         </script>
     </body>
 </html>
