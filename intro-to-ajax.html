@@ -54,9 +54,14 @@
                     '<p class="index" style="display: none">' + index + '</p>' +
                     '</article>');
             });
-           $("#card-section").on('click', '.more-info', function(){
-                alert("yo");
-           });
+            $("#card-section").on('click', '.more-info', function(){
+                let theClickedButton = $(this);
+                let index = theClickedButton.next().text();
+                $.ajax("/data/murals.json").done(function(data){
+                    var year = data[index].year_installed;
+                    $(theClickedButton).after('<p>' + year + '</p>');
+                });
+            });
         });
     });
 
