@@ -26,7 +26,28 @@
     "use strict";
     // TODO: Create an AJAX GET request for the file under data/inventory.json
         $.ajax("/data/inventory.json").done(function(data){
-            console.log(data);
+
+            data.forEach(function(item){
+                $("#insertProducts").append(
+                    "<tr>" +
+                    "<td>" + item.title + "</td>" +
+                    "<td>" + item.quantity + "</td>" +
+                    "<td>" + item.price + "</td>" +
+                    "<td>" + item.categories + "</td>" + "</tr>"
+
+                );
+            });
+
+
+
+
+
+
+
+
+
+
+
         });
 
 
