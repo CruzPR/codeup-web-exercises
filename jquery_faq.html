@@ -125,6 +125,10 @@
             $(this).next().children().css("font-weight", "bold");
         });
 
+        $("li").on("click", function (){
+            $(this).siblings().first().css("color", "blue");
+        })
+
         </script>
     </body>
 </html>
