@@ -22,7 +22,7 @@ $.get("http://api.openweathermap.org/data/2.5/onecall", {
     console.log(data.current.weather[0].description);
     // loop through daily
     console.log(data.daily); // it is an array, each day is an object
-    $("current").append("<p>" + data.current.temp + "</p>")
+    $("#current").append("<p>" + data.current.temp + "</p>")
     
     data.daily.forEach(function(dailyForecast, index){
         if(index < 5){
@@ -31,7 +31,7 @@ $.get("http://api.openweathermap.org/data/2.5/onecall", {
             console.log(datetime)
             // console.log(datetime.getMonth() + " " + datetime.getDate());
             let dateMonth = months[datetime.getMonth()] + " " + datetime.getDate();
-            $("#forecast").append("<h3>" + datetime + "</h3>" + "<p>" + dailyForecast.temp.min + "</p>" + "<p>" + dailyForecast.temp.max + "</p>" + "<p>" + humidity + " " + dailyForecast.humidity +"%"+ "</p>");
+            $("#forecast").append("<h3>" + datetime + "</h3>" + "<p style='color: blue'>" + "Low: " + dailyForecast.temp.min +"°F"+ "</p>" + "<p style='color: red'>" + "High: " + dailyForecast.temp.max + "°F" + "</p>" + "<p style='color: cadetblue'>" + humidity + " " + dailyForecast.humidity + "%" + "</p>");
             
             
         }
