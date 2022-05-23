@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Another DOM Warm Up</title>
+</head>
+<body>
+
+<h1>The magic number is: <span id="output"></span></h1>
+<form>
+    <label for="number-input">Number</label>
+    <input id="number-input" type="number" min="0" max="100">
+    <button id="num-btn" type="button">Update Number</button>
+</form>
+
+<script>
+
+    "use strict";
+
+    // TODO: update the following code to redirect the user to the following page if the user submits the number 42:
+    // https://en.wikipedia.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy
+
+    // The functionality of displaying any other number in the h1 should be preserved.
+
+    const output = document.querySelector('#output');
+    const input = document.querySelector('#number-input');
+    const numBtn = document.querySelector('#num-btn');
+    numBtn.addEventListener('click', function() {
+        output.innerText = input.value;
+    });
+
+</script>
+
+</body>
+</html>
