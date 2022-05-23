@@ -26,7 +26,13 @@
     const input = document.querySelector('#number-input');
     const numBtn = document.querySelector('#num-btn');
     numBtn.addEventListener('click', function() {
-        output.innerText = input.value;
+        if(input.value == 42) {
+            //redirect the client browser to the Wikipedia page.
+            window.location = "https://en.wikipedia.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy";
+        } else {
+            output.innerText = input.value;
+        }
+
     });
 
 </script>
