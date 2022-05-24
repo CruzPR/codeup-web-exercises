@@ -1,0 +1,12 @@
+* {
+box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(0.25turn, #eaea9f, #ebf8e1, #3cbef6);
+}
+
+#map{
+    margin-left: 40%;
+    box-shadow: 10px 5px 5px hsl(198, 91%, 60%);
+}
