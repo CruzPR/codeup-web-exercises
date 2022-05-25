@@ -28,3 +28,27 @@ console.log(message);
 // TODO: Refactor the following code to use ES6 syntax. The output should stay the same.
 
      const doubleInput = input => input * 2;
+
+    let addArgsC = (num1 = 2, num2 = 2) => num1 + num2;  // 2 inside the parameter's parathesis are the default value for the parameters
+
+// Object assignment shorthand
+// Property and value at the same time as a variable (key/value pairs) Front end framework
+
+    const dog = {
+        breed,
+        age,
+        name,
+        isCute
+    };
+
+    const puppy = {
+        breed: "Lab",
+        age: 10,
+        name: "Sabrina",
+        isCute: true
+    };
+
+    let {breed, age, name, isCute} = puppy;
+
+    let {username, password, isLoggedIn, isDarkMode} = userSettings;
+        username = "Carlos"; // not everything is defined
