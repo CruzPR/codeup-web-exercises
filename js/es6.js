@@ -60,7 +60,7 @@ let names = [];
 // users.forEach(function(user) {
 //   return emails.push(user.email);
 // });
-  users.forEach(user => emails.push(user.email))j
+  users.forEach(user => emails.push(user.email))
 
 
 // users.forEach(function(user) {
