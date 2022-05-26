@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Promises Lecture</title>
+
+    <!--    To color the code in the page-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <style>
+        body {
+            background-color: #9ca3af;
+        }
+
+        #pokemon {
+            width: 80%;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: auto;
+            justify-content: space-around;
+        }
+
+        .pokemon {
+            border-radius: 5px;
+            background-color: white;
+            padding: 10px;
+        }
+
+
+        #disney {
+            margin-right: auto;
+            margin-left: auto;
+            width: 80%;
+        }
+
+        #disney ul {
+            padding: 0;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap: 20px;
+            text-align: center;
+
+        }
+
+        #disney ul li {
+            background-color: white;
+        }
+
+        #disney ul img {
+            min-width: 200px;
+            min-height: 200px;
+            max-width: 200px;
+            max-height: 200px;
+        }
+
+        #disneyButtons {
+            display: flex;
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <!--Search for Pokemon-->
+    <label for="search">Search:</label> <input id="search" type="text">
+</header>
+
+<div id="pokemon">
+    <!--    Div to hold returned pokemon from api-->
+</div>
+
+<div id="disney">
+    <!--    Div to hold returned characters from api-->
+</div>
+
+<div id="disneyButtons">
+    <button id="prev" value="prev">Prev</button>
+    <div id="current">0</div>
+    <button id="next" value="next">Next</button>
+</div>
+
+</body>
+
+<script>
+
+    // TODO: Promises Lecture
+
+    // Promise States
+    // wait for something to happen multiple events can happen at the same time.
+
+
+    // Define: Pending - in this state as soon as you create it.
+
+    // Define: Resolved - resolve() is called by the internal function. Is in this state when it is complete.
+
+    // Define: Rejected - reject() is called by the internal function, error handling goes here. Happens when it
+    // is rejected by the function
+
+
+    // TODO: Explain Async vs Sync
+
+    // Define: Async - Asynchronous - without being in sync with other things. multiple running at once, they can
+    // finish at different times as well.
+
+    // Define: Sync - write a line then the next line then the next. a,b,c Locking
+
+    // ASK: What are potential pitfalls doing things each way?  they can run out of order, can mess each other up.
+    // data you need doesent exist yet.
+
+    // TODO: Creating our first promises
+
+
+    // Example:
+    const getRandom = (resolve, reject) => {
+        const isResolved = (Math.random() > 0.6)
+
+        if(isResolved) {
+            resolve("Resolved!"); // IF something went well ->  resolve
+        } else {
+            reject("Rejected!"); // IF Something went bad  ->  reject
+        }
+    }
+
+    const getResolved = (resolve) => {
+        return resolve("Resolved!")
+    }
+
+    const getRejected = (resolve, reject) => {
+        return reject("Rejected!!s");
+    }
+
+    const myFirstPromise = new Promise(getRandom);
+
+    console.log("myFirstPromise:", myFirstPromise)
+
+    // Explain: then and catch
+
+    myFirstPromise.then(
+        (response) => {
+            console.log("inline handler: response :", response);
+            // what am i going to do next?
+        } ).catch((response) => {
+        console.log("inline handler: response bad : ", response);
+    })
+
+    const handlerGood = (res) => console.log("res :", res);
+    const handlerBad = (res) => console.log("res bad:", res);
+
+    myFirstPromise.then(handlerGood).catch(handlerBad);
+
+    myFirstPromise.then(handlerGood, handlerBad);
+
+
+    // TODO: Chaining
+
+    // Explain: Promise Chaining
+    // This allows us to ensure one promise completes before another one.
+    // Promise A, followed by Promise B, ...
+    // We might need to get something from Promise A as a requirement for promise B
+
+    // Example:
+
+    const myNewFirstPromise = new Promise(getResolved);
+
+    myNewFirstPromise.then((res) => {
+        console.log("first response:", res);
+        const mySecondPromise = new Promise(getResolved)
+        // we ensure the second promise happens after the first.
+        return mySecondPromise;
+    }).then((res) => {
+        //to do another thing with it
+        console.log("second response", res);
+    }).catch();
+
+
+    // TODO: .all vs .race (Smarter chaining)
+
+    // Define: .all
+    // .all () -> accepts an array of promises! returns an array of responses
+
+    // Define: .race
+    // accepts an array of promises, returns when first promise resolves.
+
+    const p1 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('The first promise has rejected');
+            reject(10);
+        }, 1000);
+    });
+    const p2 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('The second promise has resolved');
+            resolve(20);
+        }, 2000);
+    });
+    const p3 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('The third promise has resolved');
+            resolve(30);
+        }, 3000);
+    });
+
+    //Example: Write .all method to collect the results of the 3 promises above
+
+    const handleGoodAll = (responses) => {
+        console.log("responses:", responses)
+        const total = responses.reduce((p,c) => p + c);
+        console.log("total",total);
+    }
+
+    const handleBadAll = (responses) => {
+        console.log("bad all - responses:", responses)
+    }
+
+    Promise.all([p1,p3,p2]).then(
+        handleGoodAll, handleBadAll
+    ).catch((res) => {
+        console.log(res);
+    });
+
+
+    //TODO: Fetch API
+    // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+    // explain: fetch is the native way to grab data from the web. Its similar to the jquery method $.get()
+
+    // Define: Resource Link
+
+    const resourceLink = "https://someLink.com/endpoint"
+
+    // Define: Settings object
+
+    const potentialSettingsObject = {
+        method: "POST", // or get
+        headers: "Important headers",
+        body: "data in body"
+    }
+
+    // fetch(resourceLink, potentialSettingsObject).then(() => {})
+    // is a promise!
+
+    //Example:
+    //TODO: Get a pokemon from the API using fetch. Add it to the page.
+
+    //https://pokeapi.co/docs/v2#pokemon
+    const pokemonAPI = "https://pokeapi.co/api/v2/pokemon/"
+
+    const getSinglePokemon =
+        fetch(pokemonAPI + "clefairy")
+            .then((res) => res.json())
+            .then((res) => createPokemon(res));
+
+    const createPokemon = ({ name, sprites, stats}) => {
+        document.getElementById("pokemon").innerHTML +=
+            `<div class="pokemon">
+                    <h3>${name}</h3>
+                    <img src="${sprites.front_default}">
+                      <ul>
+                        ${stats.map(({base_stat, stat}) => {
+                return `<li>${stat.name} - ${base_stat}</li>`}).join("")}
+                    </ul>
+                </div>`;
+    };
+
+
+
+
+    //TODO: Multiple pokemon at once! (All vs Race)
+
+    const clefairy = fetch(pokemonAPI + "clefairy");
+    const pikachu = fetch(pokemonAPI + "pikachu");
+    const charmander = fetch(pokemonAPI + "charmander");
+    const squirtle = fetch(pokemonAPI + "squirtle");
+
+    const arrayOfPokemon = [clefairy, pikachu, charmander, squirtle]; // Promises!
+
+    // Example: .forEach
+
+    // arrayOfPokemon.forEach((name) => {
+    //     name.then((res) => res.json())
+    //         .then(res => createPokemon(res))
+    // })
+
+    // Example: .race
+
+    Promise.race(arrayOfPokemon).then(res => console.log(res)); //all it cares about is one finishing
+
+    // Example: .all
+
+    Promise.all(arrayOfPokemon).then(arrayOfResponses => {
+        console.log("arrayOfResponses :", arrayOfResponses);
+
+        arrayOfResponses.forEach((name) => {
+            name.json().then((res) => createPokemon(res));
+        })
+
+    });
+
+
+    // TODO: Demo DOM Interaction
+
+    // Example: Show simple pokemon search
+
+    $("#search").keyup((e) => {
+        console.log("e.target.value:", e.target.value);
+        if(e.key === "Enter") fetch(pokemonAPI + e.target.value)
+            .then(res => res.json())
+            .then(res => createPokemon(res))
+            .catch(res => alert("No results!"));
+    })
+
+
+    // TODO/CLASS: Add disney results to page!
+    const disneyAPI = 'https://api.disneyapi.dev/characters';
+
+    // const getDisneyCharacters =
+    //     fetch(disneyAPI)
+    //         .then((res) => res.json()).then(disney => console.log(disney))
+    // console.log(res)
+
+    const createCharacter = ({ name, imageUrl}) => {
+        document.getElementById("disney").innerHTML +=
+            `<li class="disney">
+                    <h3>${name}</h3>
+                    <img src="${imageUrl}">
+                </li>`;
+    };
+
+
+    fetch(disneyAPI).then(res => res.json()).then((res) => {
+        document.getElementById("disney").innerHTML = '<ul>'
+        res.data.forEach((char) => {
+            createCharacter(char);
+        });
+        document.getElementById("disney").innerHTML += '</ul>'
+    });
+
+
+
+
+
+
+
+
+
+
+    //DOCS: "https://disneyapi.dev/docs";
+
+    // ASK:
+    // Can you call this api of disney characters and map each of these characters to
+    // an unordered list. Attach that list to the page on the #disney id
+    // Add the results to the disney div.
+    // Include at least the character name in the list item.
+
+
+
+    // TODO/BONUS: Add previous and next page functionality to disney results
+
+    // TODO/BONUS: Take Bobs Burgers api and return what the most watched episode was.
+    const bobsBurgersApi = "https://bobsburgers-api.herokuapp.com/episodes"
+
+
+
+
+
+</script>
+</html>
