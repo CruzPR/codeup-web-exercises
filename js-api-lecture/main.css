@@ -1,0 +1,236 @@
+/*Main CSS */
+* {
+    box-sizing: border-box;
+}
+
+html,body {
+    height: 100%;
+}
+
+body, html {
+    background-color: #d0d0d0;
+    font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,
+    Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.hide {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+    z-index: 0;
+    pointer-events: none;
+}
+
+header  {
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+
+}
+
+
+
+/* User Tables */
+
+#userTable {
+    border-collapse: collapse;
+    margin: 25px 25px;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+#userTable thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+#userTable img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+#userTable th,
+#userTable td {
+    padding: 12px 15px;
+
+}
+
+#userTable td::first-letter {
+    text-transform:capitalize;
+}
+
+#userTable tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+#userTable tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+#userTable tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+#userTable tbody tr:hover {
+    /*font-weight: bold;*/
+    color: #009879;
+    cursor: pointer;
+    background-color: #BDD2B6;;
+}
+
+#userTable .user-record {
+    cursor: pointer;
+}
+
+/*Modals CSS*/
+#modal-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(189, 210, 182, 0.56);
+    position: fixed;
+    z-index: 998;
+    top:0;
+    left:0;
+}
+
+#modal {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.25);
+    width: 500px;
+    z-index: 999;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s;
+    top: calc(50% - 250px);
+    left: calc(50% - 250px);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+}
+
+
+
+#modal > header {
+    background-color: #009879;
+    padding: 10px;
+    color: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+#modal > header > h3 {
+    padding: 0;
+    margin:0;
+}
+
+#modal > main {
+    /*width: 400px;*/
+    /*position: absolute;*/
+
+    padding: 2em;
+    background: white;
+}
+
+#modal > footer {
+    background-color: #e8e8e8;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+}
+
+
+/* Profile CSS*/
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile .header {
+    transform: translateY(-75px);
+    background-color: rgba(82, 124, 118, 0.98);
+    width: 115%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    transform: translateY(-60px);
+    border-radius: 50%;
+    border: 1px solid #fff;
+}
+
+.profile h3 {
+    transform: translateY(-30px);
+    padding: 0;
+    margin:0;
+    color: #fff;
+    font-size: 32px;
+}
+
+.profile p.sub-header {
+    transform: translateY(-30px);
+}
+
+.profile a {
+    color: #e7e7e7;
+}
+
+.profile .location {
+
+}
+
+
+
+
+
+
+/*Edit Form*/
+
+form[name="update"] {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+form[name="update"] label{
+    width: 50%
+}
+
+form[name="update"] input{
+    width: 50%
+}
+
+
+
+
+
+    /*Buttons Styling*/
+button {
+    border:1px solid #9ca3af;
+    min-width: 30px;
+    padding:10px;
+    cursor: pointer;
+    border-radius: 20px;
+    /*//background-color: #E6563B;*/
+}
