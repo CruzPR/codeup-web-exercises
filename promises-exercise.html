@@ -317,11 +317,6 @@
     // TODO/CLASS: Add disney results to page!
     const disneyAPI = 'https://api.disneyapi.dev/characters';
 
-    // const getDisneyCharacters =
-    //     fetch(disneyAPI)
-    //         .then((res) => res.json()).then(disney => console.log(disney))
-    // console.log(res)
-
     const createCharacter = ({ name, imageUrl}) => {
         document.getElementById("disney").innerHTML +=
             `<li class="disney">
@@ -329,7 +324,6 @@
                     <img src="${imageUrl}">
                 </li>`;
     };
-
 
     fetch(disneyAPI).then(res => res.json()).then((res) => {
         document.getElementById("disney").innerHTML = '<ul>'
