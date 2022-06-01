@@ -1,4 +1,4 @@
-import {DEMO_API_KEY} from "../js/keys.js";
+import {DEMO_API_KEY} from "js/keys.js";
 
 // this is the main url the api endpoints is pointing to
 export const baseURL = "https://dummyapi.io/data/v1"

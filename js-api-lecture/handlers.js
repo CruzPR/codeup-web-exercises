@@ -37,15 +37,38 @@ const handleDoDelete = (event) => {
     // TODO: Delete User by ID
     // TODO: Hide Modal
     // TODO: Reload form
+    
+    let settings = fetchSettings;
+        settings.method = "DELETE";
+    }
+
+
+fetch(baseURL + "/user/" + event.target.value,fetchSettings)
+    .then(res => res.json())
+    .then(res => {
+        
+})
+
+
 }
-
-
-
 // Example: get fetch request
 export const handleDisplayProfile = (event) => {
     toggleModal();
     // TODO: Create fetch to get the profile information
     // TODO: Map info to modal in view.
+
+    fetch(baseURL + "/user/" + event.target.dataset.id, fetchSettings)
+        .then(res => res.jason())
+        .then(res => {
+           
+            modal.main.innerHTML = mapUserToView(res);
+            modal.foot.innerHTML = `<button class= "close-modal">Close</button>`
+
+            $(".close-modal").click(() => disableModal());
+
+        })
+
+
 }
 
 
